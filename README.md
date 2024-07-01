@@ -17,7 +17,7 @@ The following simplistically shows how this Terraform module achieves enforcemen
 1. A user creates an EC2 instance
 2. AWS Event Bridge rules are setup to send events when an EC2 instance is `Running` and when an EBS volume is `created`
 3. An event is received by Lambda and a function (code in the `function/` directory) is executed.
-4. The function performs logic to tag instances based on the `REQUIRED_TAGS_KEYS` and `REQUIRED_TAGS_VALUES` 
+4. The function performs logic to tag instances/volumes based on the `REQUIRED_TAGS_KEYS` and `REQUIRED_TAGS_VALUES` 
 environment variables.
 5. Logs are sent to a CloudWatch log group for review.
 
